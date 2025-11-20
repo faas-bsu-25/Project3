@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dx13wfn5krddf"
+path="res://.godot/imported/TELETYPE MODEL 28 ASR COPYING ITTY - MUSEUM OF COMMUNICATIONS - SEATTLE.wav-998371a9a6c61008ff2827a5709576b5.sample"
+
+[deps]
+
+source_file="res://Sounds/TELETYPE MODEL 28 ASR COPYING ITTY - MUSEUM OF COMMUNICATIONS - SEATTLE.wav"
+dest_files=["res://.godot/imported/TELETYPE MODEL 28 ASR COPYING ITTY - MUSEUM OF COMMUNICATIONS - SEATTLE.wav-998371a9a6c61008ff2827a5709576b5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
