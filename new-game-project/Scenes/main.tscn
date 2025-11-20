@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3ir376df04gd"]
+
+[ext_resource type="Texture2D" uid="uid://c65tsg1erlfa0" path="res://01-berlin-wall-1961-3067537144.jpg" id="1_jjgbg"]
+
+[node name="Main" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1148.0
+offset_bottom = 648.0
+
+[node name="01BerlinWall19613067537144" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(579, 321)
+scale = Vector2(0.37500003, 0.31445313)
+texture = ExtResource("1_jjgbg")
