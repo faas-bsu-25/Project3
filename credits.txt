@@ -4,3 +4,6 @@ Intro picture: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.nat
 
 # Sounds 
 intro teletype https://www.youtube.com/watch?v=gwIhZwmHe2w
+
+# Fonts 
+VT232 https://fonts.google.com/specimen/VT323
