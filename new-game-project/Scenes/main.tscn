@@ -1,4 +1,4 @@
-[gd_scene load_steps=357 format=3 uid="uid://d3ir376df04gd"]
+[gd_scene load_steps=360 format=3 uid="uid://d3ir376df04gd"]
 
 [ext_resource type="Texture2D" uid="uid://c65tsg1erlfa0" path="res://01-berlin-wall-1961-3067537144.jpg" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://x2lq6g87og26" path="res://Animations/frames_out/frame_0000.png" id="2_alnw0"]
@@ -355,6 +355,9 @@
 [ext_resource type="Texture2D" uid="uid://b23neat2et2ij" path="res://Animations/frames_out/frame_0351.png" id="353_3m3md"]
 [ext_resource type="Texture2D" uid="uid://dc78xg1bkkt5g" path="res://Animations/frames_out/frame_0352.png" id="354_skdl8"]
 [ext_resource type="AudioStream" uid="uid://dx13wfn5krddf" path="res://Sounds/TELETYPE MODEL 28 ASR COPYING ITTY - MUSEUM OF COMMUNICATIONS - SEATTLE.wav" id="355_gtxvp"]
+[ext_resource type="FontFile" uid="uid://dkfevxi8x6mai" path="res://Fonts/VT323-Regular.ttf" id="355_hjyqo"]
+[ext_resource type="Script" uid="uid://cqtyntr2rmtlq" path="res://Scripts/play.gd" id="356_5bsmt"]
+[ext_resource type="Script" uid="uid://bti8hbcdmh3gb" path="res://Scripts/directions.gd" id="357_5mc4o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_alnw0"]
 animations = [{
@@ -1441,6 +1444,26 @@ scale = Vector2(0.4658203, 0.28833005)
 sprite_frames = SubResource("SpriteFrames_alnw0")
 autoplay = "default"
 speed_scale = 0.033
+
+[node name="Play" type="Button" parent="Node2D"]
+offset_left = 359.0
+offset_top = 480.0
+offset_right = 511.0
+offset_bottom = 528.0
+theme_override_fonts/font = ExtResource("355_hjyqo")
+theme_override_font_sizes/font_size = 40
+text = "Play Game"
+script = ExtResource("356_5bsmt")
+
+[node name="Directions" type="Button" parent="Node2D"]
+offset_left = 533.0
+offset_top = 483.0
+offset_right = 1017.0
+offset_bottom = 533.0
+theme_override_fonts/font = ExtResource("355_hjyqo")
+theme_override_font_sizes/font_size = 41
+text = "Directions to Decode Message."
+script = ExtResource("357_5mc4o")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("355_gtxvp")
