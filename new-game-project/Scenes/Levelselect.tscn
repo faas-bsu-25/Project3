@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpupsa14142ll"]
+[gd_scene load_steps=8 format=3 uid="uid://cpupsa14142ll"]
 
 [ext_resource type="Texture2D" uid="uid://dr1acjogpfe2y" path="res://Pics/Levelseclectimage.png" id="1_145i7"]
 [ext_resource type="FontFile" uid="uid://dkfevxi8x6mai" path="res://Fonts/VT323-Regular.ttf" id="2_obkeh"]
 [ext_resource type="AudioStream" uid="uid://dfr5y01pm35wo" path="res://Sounds/buzzersample_2.wav" id="3_6ixg5"]
+[ext_resource type="Script" uid="uid://cnh7rtthgcedj" path="res://Scripts/cyprus.gd" id="3_dukyn"]
+[ext_resource type="Script" uid="uid://bmaha5by8w3nh" path="res://Scripts/east_berlin.gd" id="4_1405v"]
 [ext_resource type="Script" uid="uid://bp5jtgm6s7xkd" path="res://Scripts/audio_stream_playerl.gd" id="4_dukyn"]
+[ext_resource type="Script" uid="uid://parf5csv15e" path="res://Scripts/warsaw.gd" id="5_6a3jg"]
 
 [node name="Levelselect" type="Node2D"]
 
@@ -22,32 +25,41 @@ texture = ExtResource("1_145i7")
 expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="LevelMenu"]
+layout_direction = 4
 layout_mode = 0
 offset_left = 6.0
 offset_top = 472.0
 offset_right = 1143.0
 offset_bottom = 520.0
+alignment = 1
 
 [node name="Cyprus" type="Button" parent="LevelMenu/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_obkeh")
-theme_override_font_sizes/font_size = 32
-text = "Cyprus / Lincolnshire Poacher (Tutorial)"
+theme_override_font_sizes/font_size = 40
+text = "Cyprus (Tutorial) "
+script = ExtResource("3_dukyn")
 
 [node name="East Berlin" type="Button" parent="LevelMenu/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_obkeh")
-theme_override_font_sizes/font_size = 30
-text = "East Berlin – Gong Station"
+theme_override_font_sizes/font_size = 40
+text = "East Berlin "
+script = ExtResource("4_1405v")
 
 [node name="Warsaw" type="Button" parent="LevelMenu/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_obkeh")
-theme_override_font_sizes/font_size = 22
-text = "Warsaw – Oblique Station (Final)"
+theme_override_font_sizes/font_size = 40
+text = "Warsaw (Final) "
+script = ExtResource("5_6a3jg")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_6ixg5")
 autoplay = true
 playback_type = 1
 script = ExtResource("4_dukyn")
+
+[connection signal="pressed" from="LevelMenu/HBoxContainer/Cyprus" to="LevelMenu/HBoxContainer/Cyprus" method="_on_pressed"]
+[connection signal="pressed" from="LevelMenu/HBoxContainer/East Berlin" to="LevelMenu/HBoxContainer/East Berlin" method="_on_east_berlin_pressed"]
+[connection signal="pressed" from="LevelMenu/HBoxContainer/Warsaw" to="LevelMenu/HBoxContainer/Warsaw" method="_on_pressed"]
