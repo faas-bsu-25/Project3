@@ -1,4 +1,3 @@
 extends Button
-
-func _on_pressed():
-	get_tree().change_scene_to_file("res://Scenes/Scene1.tscn")
+func _on_pressed() -> void:
+	Gamecontroller.load_level("level_select")
