@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://cpupsa14142ll"]
+[gd_scene load_steps=5 format=3 uid="uid://cpupsa14142ll"]
+
+[ext_resource type="Texture2D" uid="uid://dr1acjogpfe2y" path="res://Pics/Levelseclectimage.png" id="1_145i7"]
+[ext_resource type="FontFile" uid="uid://dkfevxi8x6mai" path="res://Fonts/VT323-Regular.ttf" id="2_obkeh"]
+[ext_resource type="AudioStream" uid="uid://dfr5y01pm35wo" path="res://Sounds/buzzersample_2.wav" id="3_6ixg5"]
+[ext_resource type="Script" uid="uid://bp5jtgm6s7xkd" path="res://Scripts/audio_stream_playerl.gd" id="4_dukyn"]
 
 [node name="Levelselect" type="Node2D"]
 
@@ -10,5 +15,34 @@ offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="LevelMenu"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 4.0
+offset_right = 1146.0
+offset_bottom = 644.0
+texture = ExtResource("1_145i7")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 453.0
+offset_right = 535.0
+offset_bottom = 493.0
+
+[node name="Cyprus" type="Button" parent="LevelMenu/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_obkeh")
+text = "Cyprus / Lincolnshire Poacher (Tutorial)"
+
+[node name="East Berlin" type="Button" parent="LevelMenu/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_obkeh")
+text = "East Berlin – Gong Station"
+
+[node name="Button2" type="Button" parent="LevelMenu/HBoxContainer"]
+layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6ixg5")
+autoplay = true
+playback_type = 1
+script = ExtResource("4_dukyn")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c65tsg1erlfa0"
-path="res://.godot/imported/01-berlin-wall-1961-3067537144.jpg-c5713a12cab4dc783a2d8c5ff5c52a6d.ctex"
+path="res://.godot/imported/01-berlin-wall-1961-3067537144.jpg-6b1a16e17fd118286b4e7a54106ca657.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://01-berlin-wall-1961-3067537144.jpg"
-dest_files=["res://.godot/imported/01-berlin-wall-1961-3067537144.jpg-c5713a12cab4dc783a2d8c5ff5c52a6d.ctex"]
+source_file="res://Pics/01-berlin-wall-1961-3067537144.jpg"
+dest_files=["res://.godot/imported/01-berlin-wall-1961-3067537144.jpg-6b1a16e17fd118286b4e7a54106ca657.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=360 format=3 uid="uid://d3ir376df04gd"]
 
-[ext_resource type="Texture2D" uid="uid://c65tsg1erlfa0" path="res://01-berlin-wall-1961-3067537144.jpg" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://c65tsg1erlfa0" path="res://Pics/01-berlin-wall-1961-3067537144.jpg" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://x2lq6g87og26" path="res://Animations/frames_out/frame_0000.png" id="2_alnw0"]
 [ext_resource type="Texture2D" uid="uid://btotbj2vbu7c6" path="res://Animations/frames_out/frame_0001.png" id="3_gtxvp"]
 [ext_resource type="Texture2D" uid="uid://cqqf3fk6lopjg" path="res://Animations/frames_out/frame_0002.png" id="4_2yr6c"]
