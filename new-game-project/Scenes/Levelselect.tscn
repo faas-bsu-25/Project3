@@ -23,23 +23,28 @@ expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="LevelMenu"]
 layout_mode = 0
-offset_left = 246.0
-offset_top = 453.0
-offset_right = 535.0
-offset_bottom = 493.0
+offset_left = 6.0
+offset_top = 472.0
+offset_right = 1143.0
+offset_bottom = 520.0
 
 [node name="Cyprus" type="Button" parent="LevelMenu/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_obkeh")
+theme_override_font_sizes/font_size = 32
 text = "Cyprus / Lincolnshire Poacher (Tutorial)"
 
 [node name="East Berlin" type="Button" parent="LevelMenu/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_obkeh")
+theme_override_font_sizes/font_size = 30
 text = "East Berlin – Gong Station"
 
-[node name="Button2" type="Button" parent="LevelMenu/HBoxContainer"]
+[node name="Warsaw" type="Button" parent="LevelMenu/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_obkeh")
+theme_override_font_sizes/font_size = 22
+text = "Warsaw – Oblique Station (Final)"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_6ixg5")
