@@ -1,3 +1,60 @@
-[gd_scene format=3 uid="uid://b6q5d4umrn63w"]
+[gd_scene load_steps=7 format=3 uid="uid://b6q5d4umrn63w"]
+
+[ext_resource type="Script" uid="uid://ccdlsk1vys7ms" path="res://Scripts/Cyprus_LevelController.gd" id="1_n3j5n"]
+[ext_resource type="Texture2D" uid="uid://cdn0l6b8c6vc7" path="res://Pics/cyprus.jpg" id="2_sf033"]
+[ext_resource type="FontFile" uid="uid://dkfevxi8x6mai" path="res://Fonts/VT323-Regular.ttf" id="3_5di7k"]
+[ext_resource type="AudioStream" uid="uid://dealpm2xrhgc4" path="res://Sounds/poacher.mp3" id="4_n25o1"]
+[ext_resource type="Script" uid="uid://cbx3n6ki7m0kp" path="res://Scripts/SuspicionBar.gd" id="5_hdn82"]
+[ext_resource type="Script" uid="uid://pw20y301sph6" path="res://Scripts/PlayerStateMachine.gd" id="6_ftvhk"]
 
 [node name="Cyprus" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_n3j5n")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 1160.0
+offset_bottom = 640.0
+texture = ExtResource("2_sf033")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 238.0
+offset_right = 1155.0
+offset_bottom = 312.0
+theme_override_fonts/font = ExtResource("3_5di7k")
+theme_override_font_sizes/font_size = 73
+text = "Your Private Key is 5,2,8,3,4"
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="InputField" type="LineEdit" parent="Control"]
+layout_mode = 0
+offset_left = 719.0
+offset_top = 386.0
+offset_right = 787.5625
+offset_bottom = 417.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("4_n25o1")
+autoplay = true
+
+[node name="SuspicionBar" type="ProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 65.0
+offset_right = 127.0
+offset_bottom = 92.0
+script = ExtResource("5_hdn82")
+
+[node name="PlayerStateMachine" type="Node2D" parent="Control"]
+script = ExtResource("6_ftvhk")
