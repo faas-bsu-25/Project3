@@ -1,8 +1,8 @@
 extends Control
-
+@export var play_button: Button
 func _ready():
-	$StartButton.pressed.connect(_start)
-	$QuitButton.pressed.connect(_quit)
+	play_button.pressed.connect(_start)
+
 
 func _start():
 	Gamecontroller.load_level("LevelSelect")
