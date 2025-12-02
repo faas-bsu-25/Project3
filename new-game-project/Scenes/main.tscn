@@ -1,5 +1,6 @@
-[gd_scene load_steps=358 format=3 uid="uid://d3ir376df04gd"]
+[gd_scene load_steps=359 format=3 uid="uid://d3ir376df04gd"]
 
+[ext_resource type="Script" uid="uid://cd0i6w5uomd1g" path="res://Scripts/MainMenu.gd" id="1_i1fxh"]
 [ext_resource type="Texture2D" uid="uid://c65tsg1erlfa0" path="res://Pics/01-berlin-wall-1961-3067537144.jpg" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://x2lq6g87og26" path="res://Animations/frames_out/frame_0000.png" id="2_alnw0"]
 [ext_resource type="Texture2D" uid="uid://btotbj2vbu7c6" path="res://Animations/frames_out/frame_0001.png" id="3_gtxvp"]
@@ -1426,9 +1427,20 @@ animations = [{
 
 [node name="Main" type="Node2D"]
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("play_button")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i1fxh")
+play_button = NodePath("Play")
 
-[node name="TextureRect" type="TextureRect" parent="Node2D"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("355_gtxvp")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 1.0000001
 offset_right = 570.8596
 offset_bottom = 225.90001
@@ -1436,14 +1448,15 @@ scale = Vector2(2.0285697, 2.8508189)
 texture = ExtResource("1_jjgbg")
 expand_mode = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control"]
 position = Vector2(913.5, 149.37502)
 scale = Vector2(0.4658203, 0.28833005)
 sprite_frames = SubResource("SpriteFrames_alnw0")
 autoplay = "default"
 speed_scale = 0.033
 
-[node name="Play" type="Button" parent="Node2D"]
+[node name="Play" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 359.0
 offset_top = 480.0
 offset_right = 511.0
@@ -1452,7 +1465,8 @@ theme_override_fonts/font = ExtResource("355_hjyqo")
 theme_override_font_sizes/font_size = 40
 text = "Play Game"
 
-[node name="Credits" type="Button" parent="Node2D"]
+[node name="Directions" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 533.0
 offset_top = 483.0
 offset_right = 1017.0
@@ -1460,7 +1474,3 @@ offset_bottom = 533.0
 theme_override_fonts/font = ExtResource("355_hjyqo")
 theme_override_font_sizes/font_size = 41
 text = "Directions to Decode Message."
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("355_gtxvp")
-autoplay = true
