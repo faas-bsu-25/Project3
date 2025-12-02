@@ -1,17 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpupsa14142ll"]
+[gd_scene load_steps=6 format=3 uid="uid://cpupsa14142ll"]
 
 [ext_resource type="Texture2D" uid="uid://dr1acjogpfe2y" path="res://Pics/Levelseclectimage.png" id="1_145i7"]
+[ext_resource type="Script" uid="uid://caob4738252oc" path="res://Scripts/LevelSelect.gd" id="1_obkeh"]
 [ext_resource type="FontFile" uid="uid://dkfevxi8x6mai" path="res://Fonts/VT323-Regular.ttf" id="2_obkeh"]
 [ext_resource type="AudioStream" uid="uid://dfr5y01pm35wo" path="res://Sounds/buzzersample_2.wav" id="3_6ixg5"]
 [ext_resource type="Script" uid="uid://bp5jtgm6s7xkd" path="res://Scripts/audio_stream_playerl.gd" id="4_dukyn"]
 
 [node name="Levelselect" type="Node2D"]
 
-[node name="LevelMenu" type="Control" parent="."]
+[node name="LevelMenu" type="Control" parent="." node_paths=PackedStringArray("Cyprus_button", "Berlin_button", "Warsaw_button")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_obkeh")
+Cyprus_button = NodePath("HBoxContainer/Cyprus")
+Berlin_button = NodePath("HBoxContainer/East Berlin")
+Warsaw_button = NodePath("HBoxContainer/Warsaw")
 
 [node name="TextureRect" type="TextureRect" parent="LevelMenu"]
 layout_mode = 0
