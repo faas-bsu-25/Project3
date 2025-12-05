@@ -9,12 +9,17 @@
 
 [node name="Cyprus" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("PrivateKeyLabel", "BroadcastPlayer", "SubmitButton", "InputField", "SuspicionBar")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_n3j5n")
+PrivateKeyLabel = NodePath("Label")
+BroadcastPlayer = NodePath("AudioStreamPlayer")
+SubmitButton = NodePath("Button")
+InputField = NodePath("InputField")
+SuspicionBar = NodePath("SuspicionBar")
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
@@ -34,8 +39,11 @@ text = "Your Private Key is 5,2,8,3,4"
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 743.0
+offset_top = 555.0
+offset_right = 954.0
+offset_bottom = 630.0
+text = "Enter"
 
 [node name="InputField" type="LineEdit" parent="Control"]
 layout_mode = 0
@@ -46,7 +54,6 @@ offset_bottom = 417.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("4_n25o1")
-autoplay = true
 
 [node name="SuspicionBar" type="ProgressBar" parent="Control"]
 layout_mode = 0

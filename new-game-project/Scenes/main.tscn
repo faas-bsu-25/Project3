@@ -1433,7 +1433,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_i1fxh")
-play_button = NodePath("Play")
+play_button = NodePath("HBoxContainer/Play")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
 stream = ExtResource("355_gtxvp")
@@ -1455,22 +1455,27 @@ sprite_frames = SubResource("SpriteFrames_alnw0")
 autoplay = "default"
 speed_scale = 0.033
 
-[node name="Play" type="Button" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 0
-offset_left = 359.0
-offset_top = 480.0
-offset_right = 511.0
-offset_bottom = 528.0
+offset_left = 281.0
+offset_top = 540.0
+offset_right = 997.0
+offset_bottom = 590.0
+
+[node name="Play" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("355_hjyqo")
 theme_override_font_sizes/font_size = 40
-text = "Play Game"
+text = "Play Game|"
 
-[node name="Directions" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 533.0
-offset_top = 483.0
-offset_right = 1017.0
-offset_bottom = 533.0
+[node name="Quit" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("355_hjyqo")
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+
+[node name="Directions" type="Button" parent="Control/HBoxContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("355_hjyqo")
 theme_override_font_sizes/font_size = 41
-text = "Directions to Decode Message."
+text = "|Directions to Decode Message. "
