@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://b716eujow1e3b"]
 
-[ext_resource type="Script" uid="uid://rui1aelyukrr" path="res://Scripts/berlin.gd" id="1_iqfbn"]
-[ext_resource type="Texture2D" uid="uid://c65tsg1erlfa0" path="res://Pics/01-berlin-wall-1961-3067537144.jpg" id="2_7t0sx"]
+[ext_resource type="Script" uid="uid://bbmrajn5m5u7m" path="res://Scripts/Warsaw.gd" id="1_iqfbn"]
+[ext_resource type="Texture2D" uid="uid://c0kjrndfohhqs" path="res://Pics/warsaw.jpg" id="2_iqfbn"]
 [ext_resource type="FontFile" uid="uid://dkfevxi8x6mai" path="res://Fonts/VT323-Regular.ttf" id="3_2m2n2"]
-[ext_resource type="AudioStream" uid="uid://c6puytf2pxg11" path="res://Sounds/E14-4f-Control.ogg" id="4_twhow"]
+[ext_resource type="AudioStream" uid="uid://dn3b7qpwhgn4r" path="res://Sounds/e11.mp3" id="4_7t0sx"]
 [ext_resource type="Script" uid="uid://cbx3n6ki7m0kp" path="res://Scripts/SuspicionBar.gd" id="5_qgiqo"]
 [ext_resource type="Script" uid="uid://pw20y301sph6" path="res://Scripts/PlayerStateMachine.gd" id="6_r50kf"]
 
@@ -12,25 +12,20 @@ modulate_color = Color(1, 0.029999971, 0.029999971, 1)
 
 [node name="Warsaw" type="Node2D"]
 
-[node name="Control" type="Control" parent="." node_paths=PackedStringArray("PrivateKeyLabel", "BroadcastPlayer", "SubmitButton", "InputField", "SuspicionBar")]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_iqfbn")
-PrivateKeyLabel = NodePath("Private_key_label")
-BroadcastPlayer = NodePath("BroadcastPlayer")
-SubmitButton = NodePath("SubmitButton")
-InputField = NodePath("InputField")
-SuspicionBar = NodePath("SuspicionBar")
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 1.0
-offset_right = 1158.0
+offset_right = 1148.0
 offset_bottom = 646.0
-texture = ExtResource("2_7t0sx")
+texture = ExtResource("2_iqfbn")
 expand_mode = 1
 
 [node name="Private_key_label" type="Label" parent="Control"]
@@ -54,10 +49,10 @@ text = "Submit Answer"
 
 [node name="InputField" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 175.0
-offset_top = 377.0
-offset_right = 1008.0
-offset_bottom = 475.0
+offset_left = 190.0
+offset_top = 365.0
+offset_right = 1023.0
+offset_bottom = 483.0
 theme_override_colors/font_color = Color(0.18781084, 0.52846825, 0.5217966, 1)
 theme_override_colors/font_uneditable_color = Color(0.8230708, 0.94474113, 0.070010625, 0.5019608)
 theme_override_colors/font_selected_color = Color(0.01999998, 0.16700006, 1, 1)
@@ -71,7 +66,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_n3j5n")
 placeholder_text = "Enter decoded message..."
 
 [node name="BroadcastPlayer" type="AudioStreamPlayer" parent="Control"]
-stream = ExtResource("4_twhow")
+stream = ExtResource("4_7t0sx")
 
 [node name="SuspicionBar" type="ProgressBar" parent="Control"]
 layout_mode = 0
