@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7q8ygv71524k"]
+
+[ext_resource type="Script" uid="uid://ddh86kb0h55tx" path="res://Scripts/GameOver.gd" id="1_ktc4i"]
+[ext_resource type="Texture2D" uid="uid://c17t7aq7lux47" path="res://Pics/aldrich-ames-in-prison-3852327056.jpg" id="2_uib17"]
+[ext_resource type="FontFile" uid="uid://dkfevxi8x6mai" path="res://Fonts/VT323-Regular.ttf" id="3_rdiyk"]
+[ext_resource type="AudioStream" uid="uid://coqs1yllf0ap1" path="res://Sounds/189816__jobro__nederlands-luchtalarm-dutch-air-raid-siren-test-in-leiden-hd.wav" id="4_uib17"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("RetryButton", "QuitButton")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ktc4i")
+RetryButton = NodePath("../HBoxContainer/Retry")
+QuitButton = NodePath("../HBoxContainer/Quit")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 648.0
+texture = ExtResource("2_uib17")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 401.0
+offset_top = -2.0
+offset_right = 785.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("3_rdiyk")
+theme_override_font_sizes/font_size = 40
+text = "MISSION FAILED
+Suspicion Level Critical
+YOU FAILED!!!!!!!!!!!!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("4_uib17")
+autoplay = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 466.0
+offset_top = 514.0
+offset_right = 678.0
+offset_bottom = 595.0
+
+[node name="Retry" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rdiyk")
+theme_override_font_sizes/font_size = 40
+text = "Retry "
+
+[node name="Quit" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rdiyk")
+theme_override_font_sizes/font_size = 40
+text = " Quit "
