@@ -1,3 +1,73 @@
-[gd_scene format=3 uid="uid://b1gomaev0xlie"]
+[gd_scene load_steps=3 format=3 uid="uid://b1gomaev0xlie"]
+
+[ext_resource type="FontFile" uid="uid://dkfevxi8x6mai" path="res://Fonts/VT323-Regular.ttf" id="1_dcp6m"]
+[ext_resource type="Script" uid="uid://byfubo2i1cx68" path="res://Scripts/HowToDecode.gd" id="1_y34ty"]
 
 [node name="HowToDecode" type="Node2D"]
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("BackButton")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_y34ty")
+BackButton = NodePath("BackButton")
+
+[node name="BackButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 891.0
+offset_top = 569.0
+offset_right = 1122.0
+offset_bottom = 625.0
+theme_override_fonts/font = ExtResource("1_dcp6m")
+theme_override_font_sizes/font_size = 44
+text = "Back to Menu"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 8.0
+offset_right = 759.0
+offset_bottom = 95.0
+
+[node name="Title" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_dcp6m")
+theme_override_font_sizes/font_size = 40
+text = "HOW TO DECODE TRANSMISSIONS
+"
+
+[node name="Explanation" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 52.0
+offset_right = 950.0
+offset_bottom = 645.0
+theme_override_fonts/normal_font = ExtResource("1_dcp6m")
+theme_override_fonts/bold_font = ExtResource("1_dcp6m")
+theme_override_fonts/bold_italics_font = ExtResource("1_dcp6m")
+theme_override_fonts/italics_font = ExtResource("1_dcp6m")
+theme_override_fonts/mono_font = ExtResource("1_dcp6m")
+theme_override_font_sizes/normal_font_size = 25
+text = "Every numbers broadcast contains two parts:
+
+1. Broadcast Numbers
+2. Your Private Key
+
+To decode a message:
+- Add each broadcast number to the private key number in the same position.
+- Take the total MOD 26.
+- Convert the result to a letter (0 = A, 1 = B, … 25 = Z).
+
+Example:
+Broadcast: [6, 3, 6, 4, 6]
+Key:       [5, 2, 8, 3, 4]
+
+(6+5)%26 = 11 → L
+(3+2)%26 =  5 → F
+(6+8)%26 = 14 → O
+(4+3)%26 =  7 → H
+(6+4)%26 = 10 → K
+
+Decoded Message: LFOHK
+"

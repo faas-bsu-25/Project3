@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6q5d4umrn63w"]
+[gd_scene load_steps=8 format=3 uid="uid://b6q5d4umrn63w"]
 
 [ext_resource type="Script" uid="uid://ccdlsk1vys7ms" path="res://Scripts/Cyprus_LevelController.gd" id="1_n3j5n"]
 [ext_resource type="Texture2D" uid="uid://cdn0l6b8c6vc7" path="res://Pics/cyprus.jpg" id="2_sf033"]
@@ -6,6 +6,9 @@
 [ext_resource type="AudioStream" uid="uid://dealpm2xrhgc4" path="res://Sounds/poacher.mp3" id="4_n25o1"]
 [ext_resource type="Script" uid="uid://cbx3n6ki7m0kp" path="res://Scripts/SuspicionBar.gd" id="5_hdn82"]
 [ext_resource type="Script" uid="uid://pw20y301sph6" path="res://Scripts/PlayerStateMachine.gd" id="6_ftvhk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n3j5n"]
+modulate_color = Color(1, 0.029999971, 0.029999971, 1)
 
 [node name="Cyprus" type="Node2D"]
 
@@ -29,38 +32,52 @@ texture = ExtResource("2_sf033")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 307.0
-offset_top = 238.0
-offset_right = 1155.0
-offset_bottom = 312.0
+offset_left = 173.0
+offset_top = 212.0
+offset_right = 1021.0
+offset_bottom = 286.0
 theme_override_fonts/font = ExtResource("3_5di7k")
 theme_override_font_sizes/font_size = 73
 text = "Your Private Key is 5,2,8,3,4"
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 743.0
-offset_top = 555.0
-offset_right = 954.0
-offset_bottom = 630.0
-text = "Enter"
+offset_left = 297.0
+offset_top = 523.0
+offset_right = 837.0
+offset_bottom = 598.0
+theme_override_font_sizes/font_size = 40
+text = "Submit Answer"
 
 [node name="InputField" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 719.0
-offset_top = 386.0
-offset_right = 787.5625
-offset_bottom = 417.0
+offset_left = 175.0
+offset_top = 377.0
+offset_right = 1008.0
+offset_bottom = 475.0
+theme_override_colors/font_color = Color(0.18781084, 0.52846825, 0.5217966, 1)
+theme_override_colors/font_uneditable_color = Color(0.8230708, 0.94474113, 0.070010625, 0.5019608)
+theme_override_colors/font_selected_color = Color(0.01999998, 0.16700006, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.07916659, 0.95, 1)
+theme_override_colors/font_placeholder_color = Color(0.11821342, 0.88, 0.017599983, 0.6)
+theme_override_colors/caret_color = Color(0, 0.95, 0.52250016, 1)
+theme_override_colors/selection_color = Color(0.3615431, 0.222594, 0.06646733, 1)
+theme_override_fonts/font = ExtResource("3_5di7k")
+theme_override_font_sizes/font_size = 89
+theme_override_styles/normal = SubResource("StyleBoxTexture_n3j5n")
+placeholder_text = "Enter decoded message..."
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("4_n25o1")
 
 [node name="SuspicionBar" type="ProgressBar" parent="Control"]
 layout_mode = 0
-offset_left = 123.0
-offset_top = 65.0
-offset_right = 127.0
-offset_bottom = 92.0
+offset_left = 21.0
+offset_top = 11.0
+offset_right = 340.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.95, 0.01899998, 0.01899998, 1)
+theme_override_colors/font_outline_color = Color(1, 0.96857667, 0, 1)
 script = ExtResource("5_hdn82")
 
 [node name="PlayerStateMachine" type="Node2D" parent="Control"]

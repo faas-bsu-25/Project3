@@ -8,7 +8,7 @@
 
 [node name="Levelselect" type="Node2D"]
 
-[node name="LevelMenu" type="Control" parent="." node_paths=PackedStringArray("Cyprus_button", "Berlin_button", "Warsaw_button")]
+[node name="LevelMenu" type="Control" parent="." node_paths=PackedStringArray("Cyprus_button", "Berlin_button", "Warsaw_button", "BackButton")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -17,6 +17,7 @@ script = ExtResource("1_obkeh")
 Cyprus_button = NodePath("HBoxContainer/Cyprus")
 Berlin_button = NodePath("HBoxContainer/East Berlin")
 Warsaw_button = NodePath("HBoxContainer/Warsaw")
+BackButton = NodePath("HBoxContainer/BackButton")
 
 [node name="TextureRect" type="TextureRect" parent="LevelMenu"]
 layout_mode = 0
@@ -52,6 +53,27 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_obkeh")
 theme_override_font_sizes/font_size = 40
 text = "Warsaw (Final) "
+
+[node name="BackButton" type="Button" parent="LevelMenu/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_obkeh")
+theme_override_font_sizes/font_size = 40
+text = "Return to Main Menu"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelMenu"]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 2.0
+offset_right = 717.0
+offset_bottom = 85.0
+alignment = 1
+
+[node name="Label" type="Label" parent="LevelMenu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_obkeh")
+theme_override_font_sizes/font_size = 40
+text = "SELECT YOUR MISSION
+"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_6ixg5")
