@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://rui1aelyukrr" path="res://Scripts/berlin.gd" id="1_4xoq4"]
 [ext_resource type="Texture2D" uid="uid://c65tsg1erlfa0" path="res://Pics/01-berlin-wall-1961-3067537144.jpg" id="2_p2cyt"]
 [ext_resource type="FontFile" uid="uid://dkfevxi8x6mai" path="res://Fonts/VT323-Regular.ttf" id="3_q5qc1"]
-[ext_resource type="AudioStream" uid="uid://c6puytf2pxg11" path="res://Sounds/E14-4f-Control.ogg" id="4_4xoq4"]
+[ext_resource type="AudioStream" uid="uid://bqn3ipgb16rvl" path="res://Sounds/E14.wav" id="4_4xoq4"]
 [ext_resource type="Script" uid="uid://cbx3n6ki7m0kp" path="res://Scripts/SuspicionBar.gd" id="5_bq58d"]
 [ext_resource type="Script" uid="uid://pw20y301sph6" path="res://Scripts/PlayerStateMachine.gd" id="6_1oj10"]
 

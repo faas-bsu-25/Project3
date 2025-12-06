@@ -1,7 +1,7 @@
 extends Control
 
-var broadcast_numbers = [0, 0, 9, 6]
-var private_key = [14, 15, 21, 7]   # decodes to "OPEN"
+var broadcast_numbers = [3,8,4,6,3]
+var private_key = [23, 24, 0, 7, 16]
 var expected_message = ""
 
 @export var PrivateKeyLabel: Label
@@ -15,7 +15,7 @@ func _ready():
 
 	PrivateKeyLabel.text = "Private Key: %s" % str(private_key)
 
-	BroadcastPlayer.stream = preload("res://Sounds/E14.wav")
+	BroadcastPlayer.stream = preload("res://Sounds/E11.mp3")
 	BroadcastPlayer.play()
 
 	SubmitButton.pressed.connect(_check_input)
@@ -31,7 +31,6 @@ func _check_input():
 	var u = InputField.text.strip_edges().to_upper()
 
 	if u == expected_message:
-		Gamecontroller.unlock("warsaw")
-		Gamecontroller.load_level("warsaw")
+		Gamecontroller.load_level("FinalScene")
 	else:
 		SuspicionBar.add(25)
