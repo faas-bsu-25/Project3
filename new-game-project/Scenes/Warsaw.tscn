@@ -12,12 +12,18 @@ modulate_color = Color(1, 0.029999971, 0.029999971, 1)
 
 [node name="Warsaw" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("PrivateKeyLabel", "BroadcastPlayer", "SubmitButton", "InputField", "SuspicionBar", "StateMachine")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_iqfbn")
+PrivateKeyLabel = NodePath("Private_key_label")
+BroadcastPlayer = NodePath("BroadcastPlayer")
+SubmitButton = NodePath("SubmitButton")
+InputField = NodePath("InputField")
+SuspicionBar = NodePath("SuspicionBar")
+StateMachine = NodePath("PlayerStateMachine")
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
