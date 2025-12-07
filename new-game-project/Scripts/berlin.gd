@@ -1,6 +1,6 @@
 extends Control
 
-var broadcast_numbers = [0, 0, 9, 6]
+var broadcast_numbers = [0, 0, 9, 6] # key from audio
 var private_key = [14, 15, 21, 7]   # decodes to "OPEN"
 var expected_message = ""
 
@@ -11,11 +11,11 @@ var expected_message = ""
 @export var SuspicionBar: ProgressBar
 
 func _ready():
-	expected_message = decode_message()
+	expected_message = decode_message()# answer to message
 
 	PrivateKeyLabel.text = "Private Key: %s" % str(private_key)
 
-	BroadcastPlayer.stream = preload("res://Sounds/E14.wav")
+	BroadcastPlayer.stream = preload("res://Sounds/E14.wav")#loads sound
 	BroadcastPlayer.play()
 
 	SubmitButton.pressed.connect(_check_input)
@@ -26,7 +26,7 @@ func decode_message():
 		var v = (broadcast_numbers[i] + private_key[i]) % 26
 		r += char(v + 65)
 	return r
-
+# this function decodes a message
 func _check_input():
 	var u = InputField.text.strip_edges().to_upper()
 

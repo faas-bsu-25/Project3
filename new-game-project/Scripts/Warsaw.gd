@@ -34,3 +34,4 @@ func _check_input():
 		Gamecontroller.load_level("FinalScene")
 	else:
 		SuspicionBar.add(25)
+# this script works the same as the other game scenes where sound plays and if user decodes coreectly they can go to next level and if not then suspion increases 

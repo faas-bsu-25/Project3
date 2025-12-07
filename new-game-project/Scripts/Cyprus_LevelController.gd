@@ -1,7 +1,7 @@
 extends Control
 
-var broadcast_numbers = [6,3,6,4,6]
-var private_key = [5,2,8,3,4]
+var broadcast_numbers = [6,3,6,4,6] #numbers from audio 
+var private_key = [5,2,8,3,4] # key given to use to decode
 var expected_message = ""
 
 @export var PrivateKeyLabel: Label
@@ -13,10 +13,10 @@ var expected_message = ""
 func _ready():
 	expected_message = decode_message()
 
-	PrivateKeyLabel.text = "Private Key: %s" % str(private_key)
+	PrivateKeyLabel.text = "Private Key: %s" % str(private_key)# shows private Key on screen
 
-	BroadcastPlayer.stream = preload("res://Sounds/Poacher.mp3")
-	BroadcastPlayer.play()
+	BroadcastPlayer.stream = preload("res://Sounds/Poacher.mp3")# loads sound
+	BroadcastPlayer.play() # Plays it
 
 	SubmitButton.pressed.connect(_check_input)
 
@@ -28,7 +28,7 @@ func decode_message():
 		r += char(v + 65)
 	return r
 
-
+#decodes message
 func _check_input():
 	var u = InputField.text.strip_edges().to_upper()
 
@@ -37,3 +37,4 @@ func _check_input():
 		Gamecontroller.load_level("berlin")
 	else:
 		SuspicionBar.value += 25
+# Checks input to see if valid and if not it makes the Suspicion bar go highrt

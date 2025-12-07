@@ -7,3 +7,4 @@ func _ready():
 
 func _go_back():
 	Gamecontroller.load_level("MainMenu")
+# this script allows for going to main menu from directions
