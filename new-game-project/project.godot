@@ -27,3 +27,11 @@ window/size/resizable=false
 [dotnet]
 
 project/assembly_name="New Game Project"
+
+[internationalization]
+
+locale/include_text_server_data=true
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
